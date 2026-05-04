@@ -8,7 +8,7 @@
 PRODUCT_NAME = we
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.example.we
+PRODUCT_BUNDLE_IDENTIFIER = com.mostest.witsend
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2026 com.example. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2026 com.mostest. All rights reserved.

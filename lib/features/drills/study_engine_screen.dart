@@ -1,10 +1,13 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../core/models.dart';
+import '../../core/models/models.dart';
 import '../../core/study_notifier.dart';
 import '../../core/audio_service.dart';
+import '../../core/persona_notifier.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import '../../shared/widgets/tactical_button.dart';
+import '../../shared/widgets/intel_sheet.dart';
 
 class StudyEngineScreen extends ConsumerStatefulWidget {
   const StudyEngineScreen({super.key});
@@ -31,68 +34,12 @@ class _StudyEngineScreenState extends ConsumerState<StudyEngineScreen> {
   }
 
   void _showIntelSheet(BuildContext context, DrillItem drill) {
-    const trapMarker = "The AP Trap:";
-    const mdMarker = "**The AP Trap:**";
-    
-    String courseText = drill.crashCourse;
-    String? trapText;
-    
-    if (drill.crashCourse.contains(mdMarker)) {
-      final parts = drill.crashCourse.split(mdMarker);
-      courseText = parts[0].trim();
-      trapText = parts.length > 1 ? parts[1].trim() : null;
-    } else if (drill.crashCourse.contains(trapMarker)) {
-      final parts = drill.crashCourse.split(trapMarker);
-      courseText = parts[0].trim();
-      trapText = parts.length > 1 ? parts[1].trim() : null;
-    }
-
+    final persona = ref.read(personaProvider).current;
     showModalBottomSheet(
       context: context,
       backgroundColor: Colors.transparent,
       isScrollControlled: true,
-      builder: (context) {
-        return Container(
-          decoration: BoxDecoration(
-            color: const Color(0xFF1A1A1A),
-            borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
-            border: Border.all(color: Colors.greenAccent.withValues(alpha: 0.2)),
-          ),
-          padding: const EdgeInsets.all(32),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  const Icon(Icons.lightbulb, color: Colors.greenAccent, size: 28),
-                  const SizedBox(width: 12),
-                  const Text(
-                    "TACTICAL BRIEFING",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900, color: Colors.greenAccent),
-                  ),
-                  const Spacer(),
-                  IconButton(
-                    icon: const Icon(Icons.close, color: Colors.white54),
-                    onPressed: () => Navigator.pop(context),
-                  ),
-                ],
-              ),
-              const Divider(color: Colors.white10, height: 32),
-              const Text("CRASH COURSE", style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Colors.white38, letterSpacing: 2.0)),
-              const SizedBox(height: 12),
-              Text(courseText, style: const TextStyle(fontSize: 16, height: 1.6, color: Colors.white)),
-              if (trapText != null && trapText.isNotEmpty) ...[
-                const SizedBox(height: 32),
-                const Text("THE AP TRAP", style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Colors.orangeAccent, letterSpacing: 2.0)),
-                const SizedBox(height: 12),
-                Text(trapText, style: const TextStyle(fontSize: 16, height: 1.6, color: Colors.white)),
-              ],
-              const SizedBox(height: 40),
-            ],
-          ),
-        ).animate().slideY(begin: 1.0, curve: Curves.easeOutQuad);
-      },
+      builder: (context) => IntelSheet(drill: drill, persona: persona),
     );
   }
 
@@ -100,6 +47,7 @@ class _StudyEngineScreenState extends ConsumerState<StudyEngineScreen> {
   Widget build(BuildContext context) {
     final state = ref.watch(studyProvider);
     final notifier = ref.read(studyProvider.notifier);
+    final persona = ref.watch(personaProvider).current;
 
     if (state.sessionComplete) {
       if (!_playedResultSound) {
@@ -111,7 +59,7 @@ class _StudyEngineScreenState extends ConsumerState<StudyEngineScreen> {
           AudioService.playFailure();
         }
       }
-      return _buildResultsView(context, state);
+      return _buildResultsView(context, state, persona);
     }
 
     final drill = state.currentDrill;
@@ -121,7 +69,7 @@ class _StudyEngineScreenState extends ConsumerState<StudyEngineScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("SESSION: $currentQuestionNumber/${state.settings?.questionLimit}"),
+        title: Text("${persona.getLabel('study_session', 'SESSION')}: $currentQuestionNumber/${state.settings?.questionLimit}"),
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
@@ -142,24 +90,24 @@ class _StudyEngineScreenState extends ConsumerState<StudyEngineScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  _buildHeader(drill),
+                  _buildHeader(drill, persona),
                   const SizedBox(height: 24),
                   if (drill is MatchingItem) _buildMatching(drill, state, notifier),
                   if (drill is MCQItem) _buildMCQ(drill, state, notifier),
                   if (drill is FRQItem) _buildFRQ(drill, state, notifier),
                   const SizedBox(height: 32),
-                  if (state.isAnswered) _buildFeedback(state, notifier, drill),
+                  if (state.isAnswered) _buildFeedback(state, notifier, drill, persona),
                 ],
               ),
             ),
           ),
-          _buildActionArea(state, notifier),
+          _buildActionArea(state, notifier, persona),
         ],
       ),
     );
   }
 
-  Widget _buildHeader(DrillItem drill) {
+  Widget _buildHeader(DrillItem drill, Persona persona) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -181,7 +129,7 @@ class _StudyEngineScreenState extends ConsumerState<StudyEngineScreen> {
             TextButton.icon(
               onPressed: () => _showIntelSheet(context, drill),
               icon: const Icon(Icons.lightbulb_outline, size: 14, color: Colors.greenAccent),
-              label: const Text("NEED INTEL?", style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Colors.greenAccent)),
+              label: Text(persona.getLabel('study_intel', 'NEED INTEL?'), style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Colors.greenAccent)),
               style: TextButton.styleFrom(
                 padding: const EdgeInsets.symmetric(horizontal: 12),
                 backgroundColor: Colors.greenAccent.withValues(alpha: 0.1),
@@ -209,7 +157,7 @@ class _StudyEngineScreenState extends ConsumerState<StudyEngineScreen> {
     }
   }
 
-  Widget _buildFeedback(StudyState state, StudyNotifier notifier, DrillItem drill) {
+  Widget _buildFeedback(StudyState state, StudyNotifier notifier, DrillItem drill, Persona persona) {
     return Container(
       padding: const EdgeInsets.all(20),
       width: double.infinity,
@@ -226,7 +174,9 @@ class _StudyEngineScreenState extends ConsumerState<StudyEngineScreen> {
               Icon(state.isCorrect ? Icons.check_circle : Icons.error, color: state.isCorrect ? Colors.greenAccent : Colors.redAccent),
               const SizedBox(width: 12),
               Text(
-                state.isCorrect ? "MISSION SUCCESS" : "MISSION FAILURE",
+                state.isCorrect 
+                  ? persona.getLabel('study_success', 'MISSION SUCCESS') 
+                  : persona.getLabel('study_failure', 'MISSION FAILURE'),
                 style: TextStyle(fontWeight: FontWeight.bold, color: state.isCorrect ? Colors.greenAccent : Colors.redAccent),
               ),
               const Spacer(),
@@ -246,7 +196,7 @@ class _StudyEngineScreenState extends ConsumerState<StudyEngineScreen> {
               child: OutlinedButton.icon(
                 onPressed: () => _showIntelSheet(context, drill),
                 icon: const Icon(Icons.menu_book, size: 16),
-                label: const Text("REVIEW CRASH COURSE"),
+                label: Text(persona.getLabel('study_review', 'REVIEW CRASH COURSE')),
                 style: OutlinedButton.styleFrom(foregroundColor: Colors.white, side: const BorderSide(color: Colors.white24)),
               ),
             ),
@@ -256,7 +206,7 @@ class _StudyEngineScreenState extends ConsumerState<StudyEngineScreen> {
     );
   }
 
-  Widget _buildActionArea(StudyState state, StudyNotifier notifier) {
+  Widget _buildActionArea(StudyState state, StudyNotifier notifier, Persona persona) {
     return Container(
       padding: const EdgeInsets.all(24),
       decoration: BoxDecoration(color: Colors.black, border: Border(top: BorderSide(color: Colors.white.withValues(alpha: 0.05)))),
@@ -264,7 +214,11 @@ class _StudyEngineScreenState extends ConsumerState<StudyEngineScreen> {
         top: false,
         child: SizedBox(
           width: double.infinity,
-          child: ElevatedButton(
+          child: TacticalButton(
+            persona: persona,
+            labelKey: 'study_continue',
+            fallback: 'CONTINUE MISSION',
+            fullWidth: true,
             onPressed: state.isAnswered ? () {
               _answerController.clear();
               setState(() {
@@ -273,8 +227,6 @@ class _StudyEngineScreenState extends ConsumerState<StudyEngineScreen> {
               });
               notifier.nextDrill();
             } : null,
-            style: ElevatedButton.styleFrom(padding: const EdgeInsets.symmetric(vertical: 20)),
-            child: const Text("CONTINUE MISSION"),
           ),
         ),
       ),
@@ -393,6 +345,7 @@ class _StudyEngineScreenState extends ConsumerState<StudyEngineScreen> {
   }
 
   Widget _buildFRQ(FRQItem drill, StudyState state, StudyNotifier notifier) {
+    final persona = ref.read(personaProvider).current;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -411,9 +364,12 @@ class _StudyEngineScreenState extends ConsumerState<StudyEngineScreen> {
         ),
         const SizedBox(height: 20),
         if (!_submitted)
-          SizedBox(
-            width: double.infinity,
-            child: ElevatedButton(onPressed: _submitFRQ, child: const Text("REVEAL RUBRIC")),
+          TacticalButton(
+            persona: persona,
+            labelKey: 'study_reveal',
+            fallback: 'REVEAL RUBRIC',
+            fullWidth: true,
+            onPressed: _submitFRQ,
           ),
         if (_submitted) ...[
           const Text("SCORING RUBRIC", style: TextStyle(color: Colors.greenAccent, fontWeight: FontWeight.bold, fontSize: 12)),
@@ -436,11 +392,11 @@ class _StudyEngineScreenState extends ConsumerState<StudyEngineScreen> {
                 const SizedBox(height: 12),
                 Row(
                   children: [
-                    Expanded(child: OutlinedButton(onPressed: () => notifier.submitAnswer(true), style: OutlinedButton.styleFrom(foregroundColor: Colors.greenAccent, side: const BorderSide(color: Colors.greenAccent)), child: const Text("CORRECT"))),
+                    Expanded(child: OutlinedButton(onPressed: () => notifier.submitAnswer(true), style: OutlinedButton.styleFrom(foregroundColor: Colors.greenAccent, side: const BorderSide(color: Colors.greenAccent)), child: Text(persona.getLabel('study_correct', 'CORRECT')))),
                     const SizedBox(width: 8),
-                    Expanded(child: OutlinedButton(onPressed: () => notifier.submitAnswer(true), style: OutlinedButton.styleFrom(foregroundColor: Colors.orangeAccent, side: const BorderSide(color: Colors.orangeAccent)), child: const Text("PARTIAL"))),
+                    Expanded(child: OutlinedButton(onPressed: () => notifier.submitAnswer(true), style: OutlinedButton.styleFrom(foregroundColor: Colors.orangeAccent, side: const BorderSide(color: Colors.orangeAccent)), child: Text(persona.getLabel('study_partial', 'PARTIAL')))),
                     const SizedBox(width: 8),
-                    Expanded(child: OutlinedButton(onPressed: () => notifier.submitAnswer(false), style: OutlinedButton.styleFrom(foregroundColor: Colors.redAccent, side: const BorderSide(color: Colors.redAccent)), child: const Text("FAILED"))),
+                    Expanded(child: OutlinedButton(onPressed: () => notifier.submitAnswer(false), style: OutlinedButton.styleFrom(foregroundColor: Colors.redAccent, side: const BorderSide(color: Colors.redAccent)), child: Text(persona.getLabel('study_failed', 'FAILED')))),
                   ],
                 ),
               ],
@@ -450,7 +406,7 @@ class _StudyEngineScreenState extends ConsumerState<StudyEngineScreen> {
     );
   }
 
-  Widget _buildResultsView(BuildContext context, StudyState state) {
+  Widget _buildResultsView(BuildContext context, StudyState state, Persona persona) {
     final accuracy = state.sessionAnswered == 0 ? 0 : (state.sessionCorrect / state.sessionAnswered) * 100;
     return Scaffold(
       body: Center(
@@ -461,12 +417,18 @@ class _StudyEngineScreenState extends ConsumerState<StudyEngineScreen> {
             children: [
               const Icon(Icons.analytics, size: 80, color: Colors.greenAccent),
               const SizedBox(height: 24),
-              const Text("DEBRIEF COMPLETE", style: TextStyle(fontSize: 24, fontWeight: FontWeight.w900)),
+              Text(persona.getLabel('study_results', 'DEBRIEF COMPLETE'), style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w900)),
               const SizedBox(height: 40),
-              _resultRow("FINAL ACCURACY", "${accuracy.toInt()}%"),
-              _resultRow("DRILLS COMPLETED", state.sessionAnswered.toString()),
+              _resultRow(persona.getLabel('study_accuracy', 'FINAL ACCURACY'), "${accuracy.toInt()}%"),
+              _resultRow(persona.getLabel('study_answered', 'DRILLS COMPLETED'), state.sessionAnswered.toString()),
               const SizedBox(height: 60),
-              SizedBox(width: double.infinity, child: ElevatedButton(onPressed: () => Navigator.pop(context), child: const Text("RETURN TO BASE"))),
+              TacticalButton(
+                persona: persona,
+                labelKey: 'study_exit',
+                fallback: 'RETURN TO BASE',
+                fullWidth: true,
+                onPressed: () => Navigator.pop(context),
+              ),
             ],
           ),
         ),

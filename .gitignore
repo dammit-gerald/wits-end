@@ -43,3 +43,18 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Environment & Keys
+.env*
+*.jks
+*.keystore
+*.p12
+*.key
+google-services.json
+GoogleService-Info.plist
+key.properties
+
+# Local IDE configs
+.vscode/
+.idea/
+*.iml

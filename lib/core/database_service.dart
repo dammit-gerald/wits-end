@@ -4,7 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
-import 'models.dart';
+import 'models/models.dart';
 
 class DatabaseService {
   static final DatabaseService _instance = DatabaseService._internal();
@@ -441,10 +441,5 @@ class DatabaseService {
     await db.delete('unit_stats');
     _webStats.clear();
     _webUnitStats.clear();
-  }
-
-  Future<FeedbackBank> getFeedbackBank() async {
-    final String response = await rootBundle.loadString('assets/json/bank.json');
-    return FeedbackBank.fromJson(jsonDecode(response));
   }
 }

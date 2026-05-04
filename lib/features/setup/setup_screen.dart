@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../core/models.dart';
+import '../../core/models/models.dart';
 import '../../core/study_notifier.dart';
 import '../../core/audio_service.dart';
+import '../../core/persona_notifier.dart';
+import '../library/library_notifier.dart';
 import '../drills/study_engine_screen.dart';
+import '../../shared/widgets/tactical_button.dart';
 
 class SetupScreen extends ConsumerStatefulWidget {
-  const SetupScreen({super.key});
+  final List<String>? initialSubjectIds;
+  const SetupScreen({super.key, this.initialSubjectIds});
 
   @override
   ConsumerState<SetupScreen> createState() => _SetupScreenState();
@@ -17,6 +21,7 @@ class _SetupScreenState extends ConsumerState<SetupScreen> {
   final List<DrillType> _selectedTypes = [DrillType.matching, DrillType.mcq, DrillType.frq];
   int _questionLimit = 20;
   StudyIntensity _intensity = StudyIntensity.balanced;
+  bool _cramMode = false;
 
   @override
   void initState() {
@@ -25,7 +30,14 @@ class _SetupScreenState extends ConsumerState<SetupScreen> {
   }
 
   Future<void> _loadUnits() async {
-    final units = await ref.read(studyProvider.notifier).getAvailableUnits();
+    final libraryState = ref.read(libraryProvider);
+    final subjectIds = widget.initialSubjectIds ?? libraryState.starredSubjectIds.toList();
+    
+    // If no subjects starred, default to Human Geo so it's not empty for new users
+    final units = await ref.read(studyProvider.notifier).getAvailableUnits(
+      subjectIds: subjectIds.isEmpty ? ['32b3925b-cd01-421a-988a-27e1dc4cee5a'] : subjectIds,
+    );
+    
     setState(() {
       _selectedUnits.addAll(units);
     });
@@ -34,10 +46,12 @@ class _SetupScreenState extends ConsumerState<SetupScreen> {
   @override
   Widget build(BuildContext context) {
     final state = ref.watch(studyProvider);
+    final libraryState = ref.watch(libraryProvider);
+    final persona = ref.watch(personaProvider).current;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("STRATEGIC BRIEFING"),
+        title: Text(persona.getLabel('setup_title', 'STRATEGIC BRIEFING')),
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
@@ -57,7 +71,11 @@ class _SetupScreenState extends ConsumerState<SetupScreen> {
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: FutureBuilder<List<String>>(
-                  future: ref.read(studyProvider.notifier).getAvailableUnits(),
+                  future: ref.read(studyProvider.notifier).getAvailableUnits(
+                    subjectIds: libraryState.starredSubjectIds.isEmpty 
+                        ? ['32b3925b-cd01-421a-988a-27e1dc4cee5a'] 
+                        : libraryState.starredSubjectIds.toList(),
+                  ),
                   builder: (context, snapshot) {
                     if (!snapshot.hasData) return const Center(child: CircularProgressIndicator());
                     final units = snapshot.data!;
@@ -195,6 +213,34 @@ class _SetupScreenState extends ConsumerState<SetupScreen> {
                 }).toList(),
               ),
               const SizedBox(height: 32),
+              Container(
+                padding: const EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: _cramMode ? Colors.orangeAccent.withValues(alpha: 0.1) : Colors.white.withValues(alpha: 0.05),
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(color: _cramMode ? Colors.orangeAccent : Colors.white10),
+                ),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(persona.getLabel('setup_cram', 'CRAM MODE'), style: const TextStyle(fontWeight: FontWeight.bold, letterSpacing: 1)),
+                          Text("Prioritize 90% High Criticality items.", style: TextStyle(fontSize: 10, color: Colors.white54)),
+                        ],
+                      ),
+                    ),
+                    Switch(
+                      value: _cramMode,
+                      activeThumbColor: Colors.orangeAccent,
+                      activeTrackColor: Colors.orangeAccent.withValues(alpha: 0.3),
+                      onChanged: (val) => setState(() => _cramMode = val),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 32),
               const Text("QUESTION LIMIT", style: TextStyle(color: Colors.white54, fontWeight: FontWeight.bold, fontSize: 12)),
               const SizedBox(height: 12),
               Row(
@@ -210,29 +256,27 @@ class _SetupScreenState extends ConsumerState<SetupScreen> {
                 }).toList(),
               ),
               const SizedBox(height: 40),
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: _selectedUnits.isEmpty ? null : () async {
-                    AudioService.playStart();
-                    final notifier = ref.read(studyProvider.notifier);
-                    await notifier.startSession(SessionSettings(
-                      units: _selectedUnits,
-                      types: _selectedTypes,
-                      questionLimit: _questionLimit,
-                      intensity: _intensity,
-                    ));
-                    if (!context.mounted) return;
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const StudyEngineScreen()),
-                    );
-                  },
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(vertical: 20),
-                  ),
-                  child: const Text("LET'S GO"),
-                ),
+              TacticalButton(
+                persona: persona,
+                labelKey: 'setup_start',
+                fallback: "LET'S GO",
+                fullWidth: true,
+                onPressed: _selectedUnits.isEmpty ? null : () async {
+                  AudioService.playStart();
+                  final notifier = ref.read(studyProvider.notifier);
+                  await notifier.startSession(SessionSettings(
+                    units: _selectedUnits,
+                    types: _selectedTypes,
+                    questionLimit: _questionLimit,
+                    intensity: _intensity,
+                    cramMode: _cramMode,
+                  ));
+                  if (!context.mounted) return;
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const StudyEngineScreen()),
+                  );
+                },
               ),
               const SizedBox(height: 40),
             ],
