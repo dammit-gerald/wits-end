@@ -1,0 +1,1159 @@
+[
+  {
+    "chapter": "Unit 1: Thinking Geographically",
+    "combat_modules": {
+      "matching": [
+        {
+          "term": "Absolute Location",
+          "definition": "The exact, specific position of a place on the Earth's surface, usually determined by latitude and longitude coordinates.",
+          "criticality": "Medium",
+          "crash_course": "Absolute location is fixed and defined by latitude and longitude coordinates. It remains constant regardless of changes in the surrounding environment.\n\n**The AP Trap:** Examination questions may provide a specific street address; however, in the context of Human Geography, true absolute location refers specifically to the universal coordinate grid."
+        },
+        {
+          "term": "Distance Decay",
+          "definition": "The concept that interaction between two places decreases as the distance between them increases.",
+          "criticality": "High",
+          "crash_course": "Distance Decay posits that the frequency of interaction between two locations decreases as the distance between them increases.\n\n**The AP Trap:** Assessments often focus on factors that mitigate distance decay, primarily Time-Space Compression, which is facilitated by advancements in transportation and communication technology."
+        },
+        {
+          "term": "Formal Region",
+          "definition": "An area in which everyone shares in common one or more distinctive characteristics (e.g., a common language or political boundary).",
+          "criticality": "High",
+          "crash_course": "A Formal (Uniform) Region is defined by clear boundaries and shared physical or cultural characteristics, such as political jurisdictions or distinct climatic zones.\n\n**The AP Trap:** Distinguish this from Functional Regions; if a region is defined by a uniform trait or a formal border, it is classified as a Formal Region."
+        },
+        {
+          "term": "Functional Region",
+          "definition": "An area organized around a node or focal point (e.g., a metropolitan area or a radio station's broadcast range).",
+          "criticality": "High",
+          "crash_course": "A Functional (Nodal) Region is organized around a central hub or node. Its boundaries are determined by the spatial extent of the hub's influence or service area.\n\n**The AP Trap:** Scenarios involving subway systems or radio broadcast ranges typically refer to Functional Regions, as they revolve around a central point of service distribution."
+        },
+        {
+          "term": "Vernacular (Perceptual) Region",
+          "definition": "An area that people believe exists as part of their cultural identity (e.g., 'The South' in the US).",
+          "criticality": "Medium",
+          "crash_course": "A Vernacular (Perceptual) Region is defined by the internal perceptions and cultural identities of individuals rather than by formal boundaries.\n\n**The AP Trap:** Regions such as 'The Midwest' or 'The South,' whose boundaries are subject to debate or based on cultural stereotypes, are classified as Perceptual Regions."
+        },
+        {
+          "term": "Environmental Determinism",
+          "definition": "The outdated belief that the physical environment actively dictates and shapes human culture and societal development.",
+          "criticality": "High",
+          "crash_course": "This theory suggests that the physical environment is the primary determinant of human culture and societal development.\n\n**The AP Trap:** Environmental Determinism is an outdated and scientifically rejected theory often contrasted with Possibilism in examination questions."
+        },
+        {
+          "term": "Possibilism",
+          "definition": "The theory that the physical environment may set limits on human actions, but people can adjust to the environment and choose a course ofaction.",
+          "criticality": "High",
+          "crash_course": "Possibilism posits that while the physical environment may set certain limits, human technology and agency allow societies to adapt to and modify their environments.\n\n**The AP Trap:** Examples such as indoor climate control in extreme environments or massive infrastructure in arid regions illustrate the principles of Possibilism."
+        },
+        {
+          "term": "Geographic Information Systems (GIS)",
+          "definition": "A computer system that stores, organizes, analyzes, and displays geographic data in layered maps.",
+          "criticality": "High",
+          "crash_course": "GIS is a sophisticated mapping software that utilizes data layering to analyze spatial relationships and solve complex geographic problems.\n\n**The AP Trap:** GPS provides location data, whereas GIS facilitates the analysis of multiple data layers, such as demographics overlaid with infrastructure."
+        },
+        {
+          "term": "Remote Sensing",
+          "definition": "The acquisition of data about Earth's surface from a satellite orbiting the planet or from other long-distance methods.",
+          "criticality": "Medium",
+          "crash_course": "Remote Sensing involves the collection of data regarding the Earth's surface via aerial or satellite platforms without direct physical contact.\n\n**The AP Trap:** Scenarios involving satellite monitoring of agricultural health, deforestation, or urban expansion typically refer to Remote Sensing."
+        },
+        {
+          "term": "Toponym",
+          "definition": "The name given to a portion of Earth's surface.",
+          "criticality": "Low",
+          "crash_course": "A toponym is the formal geographic term for a place name.\n\n**The AP Trap:** Toponyms often provide historical insights into the cultural heritage or colonial history of a location."
+        },
+        {
+          "term": "Site",
+          "definition": "The physical character of a place (e.g., climate, water sources, topography).",
+          "criticality": "Medium",
+          "crash_course": "Site refers to the specific physical characteristics of a location, including its topography, soil composition, and climate.\n\n**The AP Trap:** Distinguish between Site (physical traits) and Situation (relative location). Describing a city based on its physical landscape refers to its Site."
+        },
+        {
+          "term": "Situation",
+          "definition": "The location of a place relative to other places; valuable for finding unfamiliar places and understanding its importance.",
+          "criticality": "High",
+          "crash_course": "Situation, or relative location, describes a place in relation to its surroundings and is a critical factor in a city's economic development and regional importance.\n\n**The AP Trap:** Shifts in a city's significance over time are frequently attributed to changes in its Situation relative to trade networks or infrastructure."
+        }
+      ],
+      "multiple_choice": [
+        {
+          "stimulus": "A map displays the percentage of Spanish speakers in each US state. A second map displays the percentage of Spanish speakers by county in Florida.",
+          "question": "Comparing these two maps demonstrates which of the following concepts?",
+          "options": [
+            "A) Different scales of analysis",
+            "B) Shifts in absolute location",
+            "C) The boundary of a functional region",
+            "D) Relocation diffusion"
+          ],
+          "correct_answer": "A",
+          "explanation": "The first map uses a national/state scale of analysis, while the second uses a local/county scale. Changing the scale of analysis reveals different spatial patterns.",
+          "criticality": "High",
+          "crash_course": "Scale of analysis refers to the spatial extent at which data is examined (Global, National, Regional, Local). Altering the scale can reveal different spatial patterns.\n\n**The AP Trap:** Questions often present two maps of identical data at different scales of analysis to illustrate how patterns change with spatial resolution."
+        },
+        {
+          "stimulus": "A city planner is trying to decide where to build a new hospital. They overlay a map of population density, a map of average income, and a map of current road networks.",
+          "question": "Which geographic tool is the planner utilizing?",
+          "options": [
+            "A) Global Positioning System (GPS)",
+            "B) Remote Sensing",
+            "C) Geographic Information Systems (GIS)",
+            "D) Cartographic Projection"
+          ],
+          "correct_answer": "C",
+          "explanation": "GIS allows users to layer multiple different types of spatial data (population, income, roads) on top of each other to analyze relationships.",
+          "criticality": "High",
+          "crash_course": "GIS technology allows for the overlaying of multiple spatial data layers to facilitate complex decision-making and problem-solving.\n\n**The AP Trap:** Keywords such as 'data layers' or 'overlay' are primary indicators that the scenario involves GIS."
+        },
+        {
+          "stimulus": "Historically, successful civilizations developed near temperate river valleys. However, modern technology allows cities like Dubai to thrive in arid desert environments.",
+          "question": "The development of Dubai best supports which geographic theory?",
+          "options": [
+            "A) Environmental Determinism",
+            "B) Distance Decay",
+            "C) Possibilism",
+            "D) Time-Space Compression"
+          ],
+          "correct_answer": "C",
+          "explanation": "Possibilism argues that while the environment limits humans, we have the technology to overcome it, as seen in desert cities.",
+          "criticality": "Medium",
+          "crash_course": "Possibilism highlights human capacity to use technology to adapt to or modify hostile physical environments.\n\n**The AP Trap:** Human development in extreme climates, such as massive infrastructure in arid regions, is a hallmark of Possibilism."
+        },
+        {
+          "stimulus": "A local pizza delivery shop advertises that it will deliver anywhere within a 15-minute drive of the store.",
+          "question": "The delivery area of this pizza shop is an example of a:",
+          "options": [
+            "A) Formal Region",
+            "B) Vernacular Region",
+            "C) Functional Region",
+            "D) Perceptual Region"
+          ],
+          "correct_answer": "C",
+          "explanation": "A functional (nodal) region is organized around a central focal point (the shop) and its boundaries are defined by the limits of its interaction (15 min drive).",
+          "criticality": "High",
+          "crash_course": "Functional regions are structured around a central node that facilitates the distribution of goods or services.\n\n**The AP Trap:** The boundaries of a functional region are defined by the extent of the node's influence, such as the limit of a broadcast signal or delivery area."
+        },
+        {
+          "stimulus": "Every map projection alters the appearance of the Earth's surface in some way.",
+          "question": "The Mercator projection is heavily criticized because it significantly distorts:",
+          "options": [
+            "A) Direction between oceans",
+            "B) The shape of countries near the equator",
+            "C) The relative size of landmasses near the poles",
+            "D) The actual distances between major cities"
+          ],
+          "correct_answer": "C",
+          "explanation": "The Mercator projection maintains accurate direction for navigation but massively distorts size, making Greenland and Antarctica look exponentially larger than they actually are.",
+          "criticality": "Low",
+          "crash_course": "Map projections inevitably result in the distortion of shape, size, distance, or direction. No flat map can perfectly represent a spherical Earth.\n\n**The AP Trap:** The Mercator projection is notable for significantly distorting the relative size of landmasses at higher latitudes (near the poles)."
+        }
+      ],
+      "frq_drills": [
+        {
+          "prompt": "Identify and explain the difference between absolute location and relative location (situation) using a specific city as an example.",
+          "rubric_bullet_points": [
+            "Define absolute location as fixed coordinates (latitude/longitude).",
+            "Define relative location/situation as a place's relationship to surrounding geography or other places.",
+            "Provide an accurate example (e.g., Chicago's absolute location is 41° N, 87° W; its relative location is on the edge of Lake Michigan, central to Midwest rail lines)."
+          ],
+          "criticality": "Medium",
+          "crash_course": "Absolute location relies on quantitative coordinate systems, while relative location (Situation) is qualitative and context-dependent.\n\n**The AP Trap:** In Free Response Questions, it is essential to support definitions with specific real-world examples to illustrate how a location's Situation influences its development."
+        },
+        {
+          "prompt": "Explain the concept of 'scale of analysis' and describe how analyzing voting data at the national scale versus the county scale can lead to different conclusions.",
+          "rubric_bullet_points": [
+            "Define scale of analysis as the spatial extent of the data being studied (local, national, global).",
+            "Explain National Scale: Might show a state as solidly voting for one party, hiding minority pockets.",
+            "Explain County Scale: Reveals internal variation, showing urban counties voting differently than rural counties within the same state."
+          ],
+          "criticality": "High",
+          "crash_course": "Scale of analysis refers to the spatial resolution of data. Localized analysis often reveals disparities that are obscured at a national or global scale.\n\n**The AP Trap:** When discussing political maps, note that national-level data may generalize trends, whereas local-level data reveals internal variation and outliers."
+        }
+      ]
+    }
+  },
+  {
+    "chapter": "Unit 2: Population and Migration Patterns",
+    "combat_modules": {
+      "matching": [
+        {
+          "term": "Push Factor",
+          "definition": "A condition that drives people away from a location (e.g., war, poverty, persecution).",
+          "criticality": "High",
+          "crash_course": "Push factors are negative conditions that compel individuals to emigrate from their place of origin.\n\n**The AP Trap:** These factors are categorized by their nature: famine is an environmental push, conflict is a political push, and unemployment is an economic push."
+        },
+        {
+          "term": "Pull Factor",
+          "definition": "A benefit or opportunity that attracts people to a specific location (e.g., economic opportunity, religious freedom).",
+          "criticality": "High",
+          "crash_course": "Pull factors are positive attributes or opportunities that attract migrants to a new destination.\n\n**The AP Trap:** Economic opportunities, such as higher wages and employment prospects, are the primary drivers of global migration patterns."
+        },
+        {
+          "term": "Demographic Transition Model (DTM)",
+          "definition": "A sequence of demographic changes in which a country moves from high birth and death rates to low birth and death rates over time.",
+          "criticality": "High",
+          "crash_course": "The DTM illustrates the transition of a society from high birth and death rates to lower rates as it industrializes.\n\n**The AP Trap:** Stage 2 is characterized by a rapid decline in mortality rates while birth rates remain high, resulting in significant population growth."
+        },
+        {
+          "term": "Dependency Ratio",
+          "definition": "The number of people under age 15 and over age 64 compared to the number of people active in the labor force.",
+          "criticality": "High",
+          "crash_course": "The dependency ratio compares the size of the non-working population (youth and elderly) to the economically active workforce.\n\n**The AP Trap:** Developing nations often face a high dependency ratio due to a large youth population, whereas developed nations face similar challenges due to an aging population."
+        },
+        {
+          "term": "Total Fertility Rate (TFR)",
+          "definition": "The average number of children a woman will have throughout her childbearing years.",
+          "criticality": "Medium",
+          "crash_course": "Total Fertility Rate (TFR) measures the average number of children born per woman during her reproductive years.\n\n**The AP Trap:** A TFR of 2.1 is considered the replacement rate. When a country's TFR falls below this level, its population will eventually begin to contract without immigration."
+        },
+        {
+          "term": "Malthusian Theory",
+          "definition": "The theory that population grows geometrically while food supply grows arithmetically, eventually leading to famine and starvation.",
+          "criticality": "High",
+          "crash_course": "Thomas Malthus posited that population growth would inevitably surpass agricultural production capacity, leading to widespread famine.\n\n**The AP Trap:** Malthusian predictions failed to account for technological advancements, such as those in the Green Revolution, which significantly expanded food production."
+        },
+        {
+          "term": "Epidemiological Transition",
+          "definition": "Distinct causes of death in each stage of the demographic transition (e.g., pandemics in Stage 1, degenerative diseases in Stage 4).",
+          "criticality": "Medium",
+          "crash_course": "The Epidemiological Transition model identifies changing causes of death that correlate with each stage of the Demographic Transition Model.\n\n**The AP Trap:** Stages 1 and 2 are dominated by infectious diseases and pandemics, while stages 3 through 5 are characterized by chronic, degenerative diseases as life expectancy increases."
+        },
+        {
+          "term": "Pro-natalist Policies",
+          "definition": "Government programs designed to increase the fertility rate and population growth (e.g., tax breaks for having children).",
+          "criticality": "High",
+          "crash_course": "Pro-natalist policies are government initiatives designed to incentivize higher birth rates and support population growth.\n\n**The AP Trap:** These policies are predominantly implemented by developed nations facing low fertility rates and a shrinking labor force."
+        },
+        {
+          "term": "Anti-natalist Policies",
+          "definition": "Government programs designed to decrease the fertility rate (e.g., China's former One-Child Policy).",
+          "criticality": "High",
+          "crash_course": "Anti-natalist policies are government programs intended to reduce fertility rates and manage rapid population expansion.\n\n**The AP Trap:** These are common in Stage 2 countries. Historical examples, such as China's One-Child Policy, have often resulted in significant demographic imbalances."
+        },
+        {
+          "term": "Step Migration",
+          "definition": "Migration that follows a path of a series of stages or steps toward a final destination.",
+          "criticality": "Low",
+          "crash_course": "Step migration involves a series of incremental moves from an initial origin toward a final, larger destination.\n\n**The AP Trap:** This process is often interrupted by 'Intervening Opportunities,' where a migrant finds suitable employment or residence before reaching their intended final destination."
+        },
+        {
+          "term": "Chain Migration",
+          "definition": "Migration of people to a specific location because relatives or members of the same nationality previously migrated there.",
+          "criticality": "Medium",
+          "crash_course": "Chain migration occurs when individuals follow established ethnic or familial networks to a new location.\n\n**The AP Trap:** This pattern is a significant factor in the development of ethnic enclaves within major urban centers."
+        },
+        {
+          "term": "Brain Drain",
+          "definition": "Large-scale emigration by talented and highly educated people from developing countries to developed countries.",
+          "criticality": "High",
+          "crash_course": "Brain drain refers to the large-scale emigration of highly skilled and educated professionals from developing nations to wealthier countries.\n\n**The AP Trap:** This process can hinder the development of the origin country by depriving it of essential human capital and expertise."
+        },
+        {
+          "term": "Remittances",
+          "definition": "Money migrants send back to family and friends in their home countries.",
+          "criticality": "Medium",
+          "crash_course": "Remittances are financial transfers made by migrant workers to individuals in their countries of origin.\n\n**The AP Trap:** These transfers represent a substantial portion of the Gross Domestic Product (GDP) for many developing nations."
+        }
+      ],
+      "multiple_choice": [
+        {
+          "stimulus": "A population pyramid for a country shows a very wide base that quickly narrows as age cohorts increase, resulting in a distinct triangle shape.",
+          "question": "Based on the population pyramid, which stage of the Demographic Transition Model is this country likely in?",
+          "options": [
+            "A) Stage 1",
+            "B) Stage 2",
+            "C) Stage 4",
+            "D) Stage 5"
+          ],
+          "correct_answer": "B",
+          "explanation": "A wide base indicates a high birth rate, and rapidly narrowing higher age cohorts indicate a declining death rate. This is characteristic of a rapidly growing population in Stage 2.",
+          "criticality": "High",
+          "crash_course": "Population pyramids provide a visual representation of a society's age and sex structure. A broad base indicates high birth rates.\n\n**The AP Trap:** A triangular shape typically indicates Stage 2 development, a columnar shape suggests Stage 4, and an inverted pyramid represents Stage 5."
+        },
+        {
+          "stimulus": "Japan is experiencing an aging population, a shrinking workforce, and a fertility rate well below the replacement level of 2.1.",
+          "question": "To combat these demographic issues, the Japanese government is most likely to implement which of the following?",
+          "options": [
+            "A) Anti-natalist policies",
+            "B) Pro-natalist policies",
+            "C) Strict emigration quotas",
+            "D) Malthusian population controls"
+          ],
+          "correct_answer": "B",
+          "explanation": "Countries with shrinking, aging populations (Stage 5 of the DTM) often use pro-natalist policies to encourage citizens to have more children to support the future workforce and dependency ratio.",
+          "criticality": "High",
+          "crash_course": "Aging populations present significant economic challenges, as a smaller workforce must support a larger elderly demographic.\n\n**The AP Trap:** To address these challenges, governments in Stage 5 countries frequently implement pro-natalist policies and financial incentives."
+        },
+        {
+          "stimulus": "In the late 19th century, thousands of people left Ireland due to famine and lack of economic opportunity, settling in coastal cities in the United States.",
+          "question": "The famine in Ireland is best classified as which of the following?",
+          "options": [
+            "A) An intervening obstacle",
+            "B) A political pull factor",
+            "C) An economic push factor",
+            "D) An environmental push factor"
+          ],
+          "correct_answer": "D",
+          "explanation": "Famine represents a hostile environmental and physical condition that forces people to leave, making it an environmental push factor.",
+          "criticality": "Medium",
+          "crash_course": "Environmental catastrophes, such as famine or drought, are significant push factors for migration.\n\n**The AP Trap:** In the context of AP Human Geography, famine resulting from crop failure is classified strictly as an environmental push factor."
+        },
+        {
+          "stimulus": "Many doctors and engineers from Sub-Saharan Africa migrate to Europe and the United States in search of higher wages and better research facilities.",
+          "question": "This phenomenon is known as:",
+          "options": [
+            "A) Step migration",
+            "B) Brain drain",
+            "C) Counter-urbanization",
+            "D) Return migration"
+          ],
+          "correct_answer": "B",
+          "explanation": "Brain drain is the loss of highly educated and skilled workers from developing nations to wealthier nations.",
+          "criticality": "Medium",
+          "crash_course": "Developed nations often attract specialized talent from developing countries through higher wages and better facilities.\n\n**The AP Trap:** The term 'Brain Drain' refers specifically to the migration of highly educated professionals, distinguishing it from general labor migration."
+        },
+        {
+          "stimulus": "Thomas Malthus predicted in the late 1700s that human population would outgrow food production. Modern 'Neo-Malthusians' share similar concerns today.",
+          "question": "What is the primary argument Neo-Malthusians make that differs from Malthus's original theory?",
+          "options": [
+            "A) Food production is no longer a concern due to the Green Revolution.",
+            "B) Population growth is outstripping not just food, but all natural resources like water and energy.",
+            "C) Population growth will naturally stabilize in Stage 4 of the DTM.",
+            "D) Developing nations have slower population growth than developed nations."
+          ],
+          "correct_answer": "B",
+          "explanation": "Neo-Malthusians expand on Malthus by warning that exponential population growth will deplete all resources, not just food.",
+          "criticality": "Low",
+          "crash_course": "Neo-Malthusians have adapted Malthusian concerns to the modern era, focusing on the depletion of all natural resources.\n\n**The AP Trap:** While Malthus focused primarily on food production, Neo-Malthusians warn of the depletion of energy, clean water, and the impact of environmental degradation."
+        }
+      ],
+      "frq_drills": [
+        {
+          "prompt": "People migrate as a result of push and pull factors. Describe TWO pull factors to a developed country, and identify TWO consequences of this migration on the receiving location.",
+          "rubric_bullet_points": [
+            "Pull Factor 1: Economic opportunity (jobs, higher wages).",
+            "Pull Factor 2: Social/Political stability or educational opportunities.",
+            "Consequence 1: Economic impact (e.g., larger labor supply, increased tax base, strain on services).",
+            "Consequence 2: Cultural impact (e.g., increased diversity, introduction of new languages/foods, potential for social friction)."
+          ],
+          "criticality": "High",
+          "crash_course": "Migration significantly impacts the demographic and cultural landscapes of both the sending and receiving nations.\n\n**The AP Trap:** When discussing the consequences of migration, ensure you address both economic impacts (e.g., labor supply) and cultural changes (e.g., increased diversity)."
+        },
+        {
+          "prompt": "Identify the characteristics of a Stage 4 country in the Demographic Transition Model regarding Birth Rates, Death Rates, and Natural Increase, and explain ONE economic challenge faced by countries in this stage.",
+          "rubric_bullet_points": [
+            "Characteristics: Low Birth Rate, Low Death Rate, Low to Zero Natural Increase.",
+            "Challenge 1: High dependency ratio regarding the elderly (strain on healthcare/pensions).",
+            "Challenge 2: Shrinking workforce leading to labor shortages."
+          ],
+          "criticality": "High",
+          "crash_course": "Stage 4 countries are characterized by stable, low population growth as birth and death rates reach equilibrium.\n\n**The AP Trap:** It is inaccurate to state that Stage 4 nations have 'no' birth rate; rather, their birth rate has declined to a level that approximates the death rate, resulting in zero natural increase."
+        }
+      ]
+    }
+  },
+  {
+    "chapter": "Unit 3: Cultural Patterns and Processes",
+    "combat_modules": {
+      "matching": [
+        {
+          "term": "Relocation Diffusion",
+          "definition": "The spread of a feature or trend through bodily movement of people from one place to another.",
+          "criticality": "High",
+          "crash_course": "Relocation diffusion involves the physical movement of individuals who carry their cultural traits to new locations.\n\n**The AP Trap:** If a trait spreads without the permanent movement of its originators, it is classified as expansion diffusion rather than relocation diffusion."
+        },
+        {
+          "term": "Contagious Diffusion",
+          "definition": "The rapid, widespread diffusion of a feature or trend throughout a population (like a viral video).",
+          "criticality": "High",
+          "crash_course": "Contagious diffusion is characterized by the rapid and widespread expansion of a trait throughout a population, similar to the spread of a virus.\n\n**The AP Trap:** Viral media and infectious diseases are primary examples used to illustrate contagious diffusion on the examination."
+        },
+        {
+          "term": "Hierarchical Diffusion",
+          "definition": "The spread of a feature or trend from one key person or node of authority/power to other persons or places (e.g., fashion starting in Paris).",
+          "criticality": "High",
+          "crash_course": "Hierarchical diffusion spreads from nodes of power or authority, often jumping between major urban centers before reaching rural areas.\n\n**The AP Trap:** If a trait bypasses small settlements to land in major population hubs initially, it is a clear example of hierarchical diffusion."
+        },
+        {
+          "term": "Stimulus Diffusion",
+          "definition": "The spread of an underlying principle, even though a specific characteristic is rejected or modified (e.g., McDonald's in India not serving beef).",
+          "criticality": "High",
+          "crash_course": "Stimulus diffusion occurs when an underlying principle or idea spreads, but the specific characteristic is modified by the adopting culture to better suit its needs.\n\n**The AP Trap:** A common example is the adaptation of fast-food menus to align with local dietary or religious restrictions while maintaining the fundamental business model."
+        },
+        {
+          "term": "Syncretism",
+          "definition": "The blending of traits from two different cultures to form a new trait.",
+          "criticality": "Medium",
+          "crash_course": "Syncretism is the process by which traits from two or more distinct cultures blend to form a new, unique cultural synthesis.\n\n**The AP Trap:** Historical examples include the blending of indigenous beliefs with colonial religions to create distinct new practices, such as Santeria or Voodoo."
+        },
+        {
+          "term": "Lingua Franca",
+          "definition": "A language mutually understood and commonly used in trade by people who have different native languages (e.g., English in global business).",
+          "criticality": "High",
+          "crash_course": "A lingua franca is a mutually understood language used for communication between speakers of different native languages, typically for trade or diplomacy.\n\n**The AP Trap:** English currently serves as the global lingua franca, particularly in the fields of international commerce, aviation, and science."
+        },
+        {
+          "term": "Placelessness",
+          "definition": "The loss of uniqueness of place in the cultural landscape so that one place looks like the next.",
+          "criticality": "Medium",
+          "crash_course": "Placelessness refers to the loss of unique cultural landscapes, resulting in environments that lack distinct characteristics and appear increasingly uniform.\n\n**The AP Trap:** Assessments often attribute placelessness to the global expansion of popular culture and the standardization of commercial architecture."
+        },
+        {
+          "term": "Universalizing Religion",
+          "definition": "A religion that attempts to appeal to all people, not just those living in a particular location (e.g., Christianity, Islam, Buddhism).",
+          "criticality": "High",
+          "crash_course": "Religions that actively seek converts through missionaries and conquest.\n\n**The AP Trap:** Because they seek converts, they spread via Contagious and Hierarchical diffusion, creating a massive global footprint."
+        },
+        {
+          "term": "Ethnic Religion",
+          "definition": "A religion with a relatively concentrated spatial distribution whose principles are likely to be based on the physical characteristics of the particular location in which its adherents are concentrated (e.g., Hinduism, Judaism).",
+          "criticality": "High",
+          "crash_course": "Ethnic religions are closely associated with a specific ethnic group and are typically concentrated in a particular geographic region.\n\n**The AP Trap:** Hinduism and Judaism are key examples; these religions rarely seek converts and primarily spread through relocation diffusion."
+        },
+        {
+          "term": "Ethnocentrism",
+          "definition": "Judging another culture solely by the values and standards of one's own culture.",
+          "criticality": "Medium",
+          "crash_course": "Ethnocentrism is the tendency to evaluate other cultures based on the standards and values of one's own culture, often leading to a sense of cultural superiority.\n\n**The AP Trap:** Assessments may contrast ethnocentrism with cultural relativism, which advocates for understanding a culture on its own terms."
+        },
+        {
+          "term": "Cultural Relativism",
+          "definition": "The practice of judging a culture by its own standards rather than viewing it through the lens of one's own culture.",
+          "criticality": "Medium",
+          "crash_course": "Cultural relativism is the practice of evaluating a culture based on its own standards and internal logic rather than through the lens of external cultural values.\n\n**The AP Trap:** This perspective is essential for geographers seeking to understand the functionality and significance of cultural practices within their specific contexts."
+        },
+        {
+          "term": "Pidgin Language",
+          "definition": "A form of speech that adopts a simplified grammar and limited vocabulary of a lingua franca, used for communications among speakers of two different languages.",
+          "criticality": "Low",
+          "crash_course": "A pidgin language is a simplified form of speech developed for communication between speakers of different languages, typically characterized by limited vocabulary and simplified grammar.\n\n**The AP Trap:** A pidgin language has no native speakers and serves as a temporary linguistic tool for interaction, often in trade contexts."
+        },
+        {
+          "term": "Creole Language",
+          "definition": "A language that results from the mixing of a colonizer's language with the indigenous language of the people being dominated, becoming the native language of a group.",
+          "criticality": "Low",
+          "crash_course": "A creole language develops when a pidgin language becomes the primary, native language of a population, acquiring a more complex structure and vocabulary.\n\n**The AP Trap:** Haitian Creole, which blends French with various West African dialects, is a prominent example frequently referenced in geographic studies."
+        }
+      ],
+      "multiple_choice": [
+        {
+          "stimulus": "A fast-food chain originating in the United States opens franchises in India. To appeal to local customs and religious beliefs, the menu replaces beef burgers with spicy paneer and chicken options.",
+          "question": "This adaptation of a global product to local culture is best described as:",
+          "options": [
+            "A) Stimulus diffusion",
+            "B) Environmental determinism",
+            "C) Hierarchical diffusion",
+            "D) Contagious diffusion"
+          ],
+          "correct_answer": "A",
+          "explanation": "Stimulus diffusion occurs when the underlying principle of a characteristic spreads, but the specific trait is modified to fit the local culture.",
+          "criticality": "High",
+          "crash_course": "Stimulus diffusion alters the trait to survive in a new cultural environment.\n\n**The AP Trap:** The word 'adapt' combined with a multinational corporation is the trigger for Stimulus Diffusion."
+        },
+        {
+          "stimulus": "A map of global religions shows Christianity spread across the Americas, Europe, and Sub-Saharan Africa, while Hinduism is almost entirely concentrated in India and Nepal.",
+          "question": "This distribution highlights the difference between:",
+          "options": [
+            "A) Monotheistic and polytheistic faiths",
+            "B) Universalizing and ethnic religions",
+            "C) Contagious and relocation diffusion",
+            "D) Popular and folk culture"
+          ],
+          "correct_answer": "B",
+          "explanation": "Universalizing religions (Christianity) actively seek converts and spread globally, while ethnic religions (Hinduism) are tied to a specific culture and location and generally do not seek converts.",
+          "criticality": "High",
+          "crash_course": "Universalizing = global spread. Ethnic = hyper-clustered in one region.\n\n**The AP Trap:** Even though Hinduism has over a billion followers, it is an *Ethnic* religion because 95% of them live in India."
+        },
+        {
+          "stimulus": "An international airline pilot from Germany and an air traffic controller in Japan communicate over the radio in English to coordinate a landing.",
+          "question": "In this scenario, English is functioning as a:",
+          "options": [
+            "A) Creole language",
+            "B) Official language",
+            "C) Lingua Franca",
+            "D) Pidgin language"
+          ],
+          "correct_answer": "C",
+          "explanation": "A lingua franca is a common language used to facilitate communication and trade between people who speak different native languages.",
+          "criticality": "High",
+          "crash_course": "A Lingua Franca bridges the gap between different native tongues for business/trade.\n\n**The AP Trap:** English is the Lingua Franca of the internet and aviation. It is a unifying force (centripetal) in global trade."
+        },
+        {
+          "stimulus": "New fashion trends often originate in major cities like New York or Paris, are adopted by celebrities, and then eventually spread to smaller cities and rural areas.",
+          "question": "This pattern is an example of:",
+          "options": [
+            "A) Contagious diffusion",
+            "B) Relocation diffusion",
+            "C) Hierarchical diffusion",
+            "D) Reverse hierarchical diffusion"
+          ],
+          "correct_answer": "C",
+          "explanation": "Hierarchical diffusion is the spread of an idea from persons or nodes of authority/power to other persons or places.",
+          "criticality": "Medium",
+          "crash_course": "Ideas trickling down a power or population hierarchy.\n\n**The AP Trap:** If an idea starts in a small rural town and moves UP to New York City (like Walmart did), that is *Reverse* Hierarchical Diffusion."
+        },
+        {
+          "stimulus": "Driving across the United States, a traveler notices that highway exits look largely identical, featuring the same fast-food chains, gas stations, and hotel brands.",
+          "question": "This homogenization of the cultural landscape is known as:",
+          "options": [
+            "A) Placelessness",
+            "B) Syncretism",
+            "C) Neocolonialism",
+            "D) Ethnocentrism"
+          ],
+          "correct_answer": "A",
+          "explanation": "Placelessness refers to the loss of unique local character, resulting in landscapes that look the same everywhere due to globalization and popular culture.",
+          "criticality": "Medium",
+          "crash_course": "When popular culture wipes out local flavor, leaving uniform landscapes.\n\n**The AP Trap:** The AP exam uses the term 'homogenization' interchangeably with placelessness."
+        }
+      ],
+      "frq_drills": [
+        {
+          "prompt": "Explain TWO ways in which globalization and the spread of popular culture impact indigenous (folk) cultures.",
+          "rubric_bullet_points": [
+            "Impact 1: Loss of traditional values/languages as younger generations adopt mainstream media and global languages.",
+            "Impact 2: Alteration of the cultural landscape, leading to placelessness (e.g., traditional architecture replaced by global corporate chains)."
+          ],
+          "criticality": "High",
+          "crash_course": "Popular culture spreads quickly and crushes isolated folk cultures.\n\n**The AP Trap:** In FRQs, always contrast them. Folk culture preserves the environment and tradition; pop culture exploits the environment to build uniform landscapes."
+        },
+        {
+          "prompt": "Identify one Universalizing Religion and one Ethnic Religion, and explain how their spatial diffusion patterns differ.",
+          "rubric_bullet_points": [
+            "Identify: Universalizing (Christianity, Islam, Buddhism); Ethnic (Judaism, Hinduism).",
+            "Universalizing Diffusion: Widespread, expansive diffusion via missionaries, conquest, and trade (contagious and hierarchical).",
+            "Ethnic Diffusion: Highly clustered, typically only spreads through relocation diffusion (migration) because they do not actively seek converts."
+          ],
+          "criticality": "High",
+          "crash_course": "The intent of the religion dictates its map footprint.\n\n**The AP Trap:** Judaism is an ethnic religion, but it has a global footprint due to the Diaspora (forced relocation diffusion). Don't let its spread trick you into calling it Universalizing."
+        }
+      ]
+    }
+  },
+  {
+    "chapter": "Unit 4: Political Patterns and Processes",
+    "combat_modules": {
+      "matching": [
+        {
+          "term": "Supranationalism",
+          "definition": "An alliance involving three or more countries for their mutual benefit such as economic, cultural or political/military (e.g., EU, UN, NATO).",
+          "criticality": "High",
+          "crash_course": "Supranationalism occurs when three or more states organize into an alliance to achieve shared economic, political, or military objectives.\n\n**The AP Trap:** Membership in supranational organizations, such as the European Union, typically requires member states to relinquish a degree of national sovereignty in exchange for collective benefits."
+        },
+        {
+          "term": "Devolution",
+          "definition": "The transfer or delegation of power to a lower level, especially by central government to local or regional administration.",
+          "criticality": "High",
+          "crash_course": "Devolution is the transfer of certain powers from a central government to regional or local administrations to address internal pressures or ethnic tensions.\n\n**The AP Trap:** It is important to distinguish devolution from balkanization; devolution involves the decentralization of power within a state, whereas balkanization refers to the total fragmentation of a state into smaller, often hostile entities."
+        },
+        {
+          "term": "Shatterbelt",
+          "definition": "A region caught between stronger colliding external cultural-political forces, under persistent stress, and often fragmented by aggressive rivals (e.g., Eastern Europe during the Cold War).",
+          "criticality": "Medium",
+          "crash_course": "A shatterbelt is a region located between stronger, competing external cultural or political forces, resulting in persistent internal stress and fragmentation.\n\n**The AP Trap:** Eastern Europe during the Cold War serves as a primary historical example of a shatterbelt, positioned between the competing interests of Western Europe and the Soviet Union."
+        },
+        {
+          "term": "Gerrymandering",
+          "definition": "The process of redrawing legislative boundaries for the purpose of benefiting the party in power.",
+          "criticality": "High",
+          "crash_course": "Gerrymandering is the manipulation of legislative district boundaries to provide an unfair political advantage to a specific party or group.\n\n**The AP Trap:** The primary techniques of gerrymandering are 'packing'—concentrating opposing voters into a single district—and 'cracking'—dispersing opposing voters across multiple districts to dilute their influence."
+        },
+        {
+          "term": "Nation-State",
+          "definition": "A state whose territory corresponds to that occupied by a particular ethnicity that has been transformed into a nationality (e.g., Japan, Iceland).",
+          "criticality": "High",
+          "crash_course": "A nation-state is a political entity where the territory corresponds to the geographic distribution of a specific ethnic or cultural group.\n\n**The AP Trap:** While globalization and migration have made true nation-states rare, Japan and Iceland remain the most cited examples due to their significant ethnic homogeneity."
+        },
+        {
+          "term": "Stateless Nation",
+          "definition": "A nationality that is not represented by a state (e.g., the Kurds, Palestinians).",
+          "criticality": "High",
+          "crash_course": "A stateless nation refers to a cultural or ethnic group that possesses a distinct national identity but lacks a sovereign territory or recognized state of its own.\n\n**The AP Trap:** The Kurds are the most prominent example of a stateless nation, with their population distributed across Turkey, Iran, Iraq, and Syria without a sovereign Kurdish state."
+        },
+        {
+          "term": "Centripetal Force",
+          "definition": "An attitude that tends to unify people and enhance support for a state (e.g., national anthem, shared language).",
+          "criticality": "High",
+          "crash_course": "Centripetal forces are factors or conditions that promote national unity and social cohesion within a political entity.\n\n**The AP Trap:** A robust national economy and a high-quality transportation infrastructure serve as significant centripetal forces that stabilize a state."
+        },
+        {
+          "term": "Centrifugal Force",
+          "definition": "A force that divides people and countries (e.g., differing languages, religious conflict, unequal wealth).",
+          "criticality": "High",
+          "crash_course": "Centrifugal forces are factors or conditions that contribute to social fragmentation and political instability within a state.\n\n**The AP Trap:** Extreme centrifugal forces, such as severe ethnic conflict or significant economic inequality, often lead to devolutionary pressures and separatist movements."
+        },
+        {
+          "term": "Choke Point",
+          "definition": "A geographical feature on land or at sea that an armed force is forced to pass, making it highly vulnerable to defense or control (e.g., Strait of Hormuz, Panama Canal).",
+          "criticality": "Medium",
+          "crash_course": "A choke point is a strategic geographical feature, such as a narrow strait or canal, that can be easily controlled to restrict global shipping and trade.\n\n**The AP Trap:** Control over significant choke points, such as the Strait of Hormuz or the Strait of Malacca, provides substantial geopolitical and economic leverage over global commodity flows."
+        },
+        {
+          "term": "Neocolonialism",
+          "definition": "Control by a powerful country of its former colonies (or other less developed countries) by economic pressures rather than direct military control.",
+          "criticality": "Medium",
+          "crash_course": "Neocolonialism refers to the indirect control of developing nations by more developed countries through economic, political, or cultural pressures rather than direct military occupation.\n\n**The AP Trap:** This concept is a fundamental component of world-systems theory, illustrating how core countries maintain influence over periphery countries through debt and corporate interests."
+        },
+        {
+          "term": "Irredentism",
+          "definition": "A policy of advocating the restoration to a country of any territory formerly belonging to it based on ethnic or historical ties.",
+          "criticality": "Low",
+          "crash_course": "When Country A tries to annex part of Country B because 'our ethnic people live there.'\n\n**The AP Trap:** Russia annexing Crimea under the claim of protecting ethnic Russians is the modern test example."
+        },
+        {
+          "term": "UNCLOS (Law of the Sea)",
+          "definition": "International agreement that defines the rights and responsibilities of nations with respect to their use of the world's oceans, establishing Exclusive Economic Zones (EEZ) up to 200 miles offshore.",
+          "criticality": "High",
+          "crash_course": "The UN rules for who owns the ocean.\n\n**The AP Trap:** You MUST know the 200-mile EEZ limit. A country owns all the fish and oil in the water 200 miles off its coast."
+        }
+      ],
+      "multiple_choice": [
+        {
+          "stimulus": "The European Union allows citizens of member states to travel, live, and work freely across national borders within the Schengen Area without passport checks.",
+          "question": "This policy is a primary example of which of the following political concepts?",
+          "options": [
+            "A) Devolution",
+            "B) Supranationalism",
+            "C) Irredentism",
+            "D) Balkanization"
+          ],
+          "correct_answer": "B",
+          "explanation": "Supranationalism occurs when multiple countries organize into an alliance and surrender some sovereignty for mutual benefit, like the EU.",
+          "criticality": "High",
+          "crash_course": "Open borders and shared currency (the Euro) are the ultimate markers of Supranationalism.\n\n**The AP Trap:** The EU is an economic alliance; NATO is a military alliance. Know the difference."
+        },
+        {
+          "stimulus": "In a hypothetical US state, the ruling political party draws a congressional district that connects rural farm areas with a narrow strip of highway to a highly urban downtown 100 miles away, ignoring county lines.",
+          "question": "This boundary drawing is most likely an attempt at:",
+          "options": [
+            "A) Reapportionment",
+            "B) Devolution",
+            "C) Gerrymandering",
+            "D) Centripetal force creation"
+          ],
+          "correct_answer": "C",
+          "explanation": "Drawing odd, non-compact boundaries to group specific voters together and benefit the party in power is gerrymandering.",
+          "criticality": "High",
+          "crash_course": "Gerrymandering creates ridiculous, unnatural shapes on the map to cheat elections.\n\n**The AP Trap:** It is legal in many places. It primarily affects the House of Representatives, causing massive political polarization."
+        },
+        {
+          "stimulus": "The Kurdish people share a distinct language, culture, and history, but they live spread across parts of Turkey, Iraq, Iran, and Syria without their own sovereign government.",
+          "question": "The Kurds are best described as a:",
+          "options": [
+            "A) Nation-state",
+            "B) Stateless nation",
+            "C) Multinational state",
+            "D) Autonomous region"
+          ],
+          "correct_answer": "B",
+          "explanation": "A stateless nation is an ethnic group/nationality that lacks its own state (country) and is distributed across other states.",
+          "criticality": "High",
+          "crash_course": "A nation is just a group of people. If they don't have borders and a government, they are stateless.\n\n**The AP Trap:** Palestinians, Kurds, and Basques are the three big stateless nations the exam will use."
+        },
+        {
+          "stimulus": "A country has a highly mountainous region in the north where people speak a different language than the central government and have recently demanded their own regional parliament.",
+          "question": "The mountains and the distinct language are acting as:",
+          "options": [
+            "A) Centripetal forces leading to supranationalism",
+            "B) Centrifugal forces leading to devolution",
+            "C) Irredentist forces leading to balkanization",
+            "D) Neocolonial forces leading to democratization"
+          ],
+          "correct_answer": "B",
+          "explanation": "Centrifugal forces (mountains causing isolation, different languages) divide a state, often leading to devolution (the transfer of power to regional authorities).",
+          "criticality": "High",
+          "crash_course": "Physical geography (mountains) isolates people, leading to cultural differences, causing centrifugal stress.\n\n**The AP Trap:** The central government granting that regional parliament is the literal definition of Devolution."
+        },
+        {
+          "stimulus": "Under the UN Convention on the Law of the Sea (UNCLOS), a state has the sole right to exploit natural resources, such as fishing and oil drilling, up to 200 nautical miles from its coast.",
+          "question": "This 200-mile area is known as the:",
+          "options": [
+            "A) Territorial Sea",
+            "B) Contiguous Zone",
+            "C) Exclusive Economic Zone (EEZ)",
+            "D) International Waters"
+          ],
+          "correct_answer": "C",
+          "explanation": "The EEZ grants a state special rights over the exploration and use of marine resources up to 200 nautical miles offshore.",
+          "criticality": "Medium",
+          "crash_course": "The EEZ is an economic goldmine for coastal countries.\n\n**The AP Trap:** If two countries' 200-mile EEZs overlap, the UN uses the 'Median Line Principle' to split the water exactly in half."
+        }
+      ],
+      "frq_drills": [
+        {
+          "prompt": "Identify ONE cultural factor and ONE physical factor that can act as centrifugal forces, leading to the devolution of a state.",
+          "rubric_bullet_points": [
+            "Cultural factor: Linguistic, religious, or ethnic differences that create internal division and calls for autonomy (e.g., Catalonians in Spain).",
+            "Physical factor: Physical geography (mountains, oceans, large distances) that isolates a region from the central government, making integration difficult."
+          ],
+          "criticality": "High",
+          "crash_course": "Centrifugal forces rip a country apart and force the government to devolve power.\n\n**The AP Trap:** Physical factors matter! An island separated from the mainland feels ignored, generating separatist momentum."
+        },
+        {
+          "prompt": "Explain TWO benefits and ONE cost of a country joining a supranational organization like the European Union.",
+          "rubric_bullet_points": [
+            "Benefit 1: Economic growth through free trade, larger markets, and lack of tariffs.",
+            "Benefit 2: Increased political/military security and diplomatic power.",
+            "Cost: Loss of partial national sovereignty (e.g., giving up control over borders, currency, or specific environmental laws)."
+          ],
+          "criticality": "High",
+          "crash_course": "Supranationalism involves the integration of multiple states into an organization that requires the partial relinquishment of sovereignty to achieve mutual benefits.\n\n**The AP Trap:** The primary challenge of supranationalism is the tension between collective institutional goals and the autonomous interests of individual member states."
+        }
+      ]
+    }
+  },
+  {
+    "chapter": "Unit 5: Agriculture and Rural Land-Use",
+    "combat_modules": {
+      "matching": [
+        {
+          "term": "Von Thünen Model",
+          "definition": "A model explaining rural land use based on transportation costs; perishable/heavy goods are produced closer to market, while extensive activities (like grazing) are further away.",
+          "criticality": "High",
+          "crash_course": "The Von Thünen model posits that land use is determined by a calculation of transportation costs relative to market distance, resulting in concentric rings of agricultural activity.\n\n**The AP Trap:** The model's contemporary relevance is limited by advancements in transportation and refrigeration technology (the 'cold chain'), which allow for globalized commodity distribution."
+        },
+        {
+          "term": "Green Revolution",
+          "definition": "Rapid diffusion of new agricultural technology, especially new high-yield seeds and fertilizers, in the mid-20th century.",
+          "criticality": "High",
+          "crash_course": "The Green Revolution involved the introduction of high-yield varieties and synthetic fertilizers in the mid-20th century, significantly increasing global food production.\n\n**The AP Trap:** While it mitigated food scarcity, it also led to environmental degradation through chemical runoff and intensified economic disparities among producers."
+        },
+        {
+          "term": "Subsistence Agriculture",
+          "definition": "Agriculture designed primarily to provide food for direct consumption by the farmer and the farmer's family (common in LDCs).",
+          "criticality": "High",
+          "crash_course": "Subsistence agriculture involves cultivating crops for the primary purpose of family consumption rather than commercial trade.\n\n**The AP Trap:** This practice is a defining characteristic of the primary sector in developing nations (LDCs) and is typically labor-intensive."
+        },
+        {
+          "term": "Commercial Agriculture",
+          "definition": "Agriculture undertaken primarily to generate products for sale off the farm (common in MDCs).",
+          "criticality": "High",
+          "crash_course": "Commercial agriculture consists of large-scale operations designed for profit and integration into global agribusiness networks.\n\n**The AP Trap:** High levels of mechanization in commercial farming result in a significantly smaller labor force relative to subsistence systems."
+        },
+        {
+          "term": "Slash-and-burn (Shifting Cultivation)",
+          "definition": "A form of subsistence agriculture in which people shift activity from one field to another; fields are cleared by slashing vegetation and burning debris.",
+          "criticality": "Medium",
+          "crash_course": "Shifting cultivation involves clearing forest land through burning to utilize ash-enriched soil until its fertility is exhausted.\n\n**The AP Trap:** This method is sustainable only at low population densities; rapid population growth can lead to irreversible deforestation."
+        },
+        {
+          "term": "Mediterranean Agriculture",
+          "definition": "Specialized farming that occurs only in areas where the dry-summer Mediterranean climate prevails (grapes, olives, wine, etc.).",
+          "criticality": "Medium",
+          "crash_course": "Mediterranean agriculture is specialized for regions with hot, dry summers and mild winters, producing high-value cash crops.\n\n**The AP Trap:** Key regions include California, central Chile, and the Mediterranean basin; look for mentions of viticulture (grapes) and olives as diagnostic indicators."
+        },
+        {
+          "term": "Agribusiness",
+          "definition": "Commercial agriculture characterized by integration of different steps in the food-processing industry, usually through ownership by large corporations.",
+          "criticality": "Medium",
+          "crash_course": "Agribusiness refers to the vertical integration of food production, where corporations control multiple stages from seed development to retail distribution.\n\n**The AP Trap:** Agribusiness leverages economies of scale, which can create significant competitive pressures for small-scale family operations."
+        },
+        {
+          "term": "Desertification",
+          "definition": "Degradation of land, especially in semiarid areas, primarily because of human actions like excessive crop planting, animal grazing, and tree cutting.",
+          "criticality": "Medium",
+          "crash_course": "Desertification is the anthropogenic degradation of semi-arid land into arid desert due to over-cultivation or overgrazing.\n\n**The AP Trap:** The Sahel region of Africa is frequently used as a primary case study for desertification in geographic assessments."
+        },
+        {
+          "term": "Columbian Exchange",
+          "definition": "The global movement of plants, animals, and diseases between the Afro-Eurasian hemisphere and the Americas following 1492.",
+          "criticality": "Low",
+          "crash_course": "The Columbian Exchange refers to the unprecedented biological exchange between the Eastern and Western hemispheres following 1492.\n\n**The AP Trap:** It is essential to distinguish the direction of flow: staple crops like potatoes and maize moved to Europe, while livestock and infectious diseases were introduced to the Americas."
+        },
+        {
+          "term": "Pastoral Nomadism",
+          "definition": "A form of subsistence agriculture based on herding domesticated animals in dry climates where planting crops is impossible.",
+          "criticality": "Low",
+          "crash_course": "Pastoral nomadism is a form of subsistence herding practiced in arid climates where sedentary agriculture is not viable.\n\n**The AP Trap:** Pastoralists follow deliberate seasonal migration patterns, a practice known as transhumance, rather than random movement."
+        }
+      ],
+      "multiple_choice": [
+        {
+          "stimulus": "A dairy farmer decides to locate their operations 10 miles from an urban center, while a wheat farmer buys land 100 miles away from the same city.",
+          "question": "According to the Von Thünen model, which factor best explains this spatial arrangement?",
+          "options": [
+            "A) Soil fertility",
+            "B) Climate determinism",
+            "C) Transportation costs and perishability",
+            "D) Access to international ports"
+          ],
+          "correct_answer": "C",
+          "explanation": "Von Thünen's model dictates that perishable, expensive-to-transport goods (milk) must be produced close to the market, while grain, being lighter and non-perishable, can be grown further away where land is cheaper.",
+          "criticality": "High",
+          "crash_course": "Spatial distribution in the Von Thünen model is determined by the intersection of transportation costs and commodity perishability.\n\n**The AP Trap:** Perishable or heavy goods, such as dairy and fresh produce, are concentrated in the innermost rings, while non-perishables like grain occupy outer rings."
+        },
+        {
+          "stimulus": "In the 1960s and 70s, countries like India and Mexico saw massive increases in wheat and rice yields due to the introduction of \"miracle seeds\" and heavy use of synthetic fertilizers.",
+          "question": "This period of agricultural advancement is known as the:",
+          "options": [
+            "A) First Agricultural Revolution",
+            "B) Second Agricultural Revolution",
+            "C) Green Revolution",
+            "D) Columbian Exchange"
+          ],
+          "correct_answer": "C",
+          "explanation": "The Green Revolution (Third Agricultural Revolution) was characterized by the introduction of high-yield varieties (HYVs) of crops and chemical fertilizers to developing nations.",
+          "criticality": "High",
+          "crash_course": "The Green Revolution involved the genetic engineering of high-yield crop varieties designed to maximize output through industrial inputs.\n\n**The AP Trap:** While it averted Malthusian crises, it was unevenly distributed geographically, notably bypassing much of Sub-Saharan Africa due to infrastructure limitations."
+        },
+        {
+          "stimulus": "A family in a developing country farms a small plot of land. They grow just enough corn and beans to feed their extended family for the year, with virtually nothing left over to sell at a market.",
+          "question": "This is an example of:",
+          "options": [
+            "A) Commercial farming",
+            "B) Subsistence farming",
+            "C) Plantation agriculture",
+            "D) Agribusiness"
+          ],
+          "correct_answer": "B",
+          "explanation": "Subsistence farming focuses on producing enough food for survival rather than for profit/sale.",
+          "criticality": "High",
+          "crash_course": "In subsistence systems, the primary objective is the direct consumption of agricultural output by the producer's household.\n\n**The AP Trap:** Contrast this with commercial agriculture, which is market-oriented and predominant in more developed countries (MDCs)."
+        },
+        {
+          "stimulus": "Regions like central Chile, southwestern Australia, and parts of California share a similar climate featuring hot, dry summers and mild, wet winters.",
+          "question": "These regions are globally significant for producing which type of agricultural goods?",
+          "options": [
+            "A) Dairy and livestock",
+            "B) Rice and sugarcane",
+            "C) Olives, grapes, and citrus",
+            "D) Wheat and corn"
+          ],
+          "correct_answer": "C",
+          "explanation": "These areas practice Mediterranean agriculture, which is highly specialized for crops like olives, grapes (wine), and citrus that thrive in that specific climate.",
+          "criticality": "Medium",
+          "crash_course": "Mediterranean agriculture is defined by a global climatic classification, not just a specific geographic location in Europe.\n\n**The AP Trap:** The products of Mediterranean systems, such as olives and wine grapes, are typically high-value cash crops intended for international markets."
+        }
+      ],
+      "frq_drills": [
+        {
+          "prompt": "Describe ONE positive consequence and ONE negative consequence of the Green Revolution on developing countries.",
+          "rubric_bullet_points": [
+            "Positive: Massively increased crop yields, preventing famine and allowing populations to grow.",
+            "Negative: Severe environmental damage from chemical fertilizers/pesticides, and economic inequality as only wealthy farmers could afford the new tech."
+          ],
+          "criticality": "High",
+          "crash_course": "The Green Revolution had profound and contradictory socioeconomic and environmental impacts on developing nations.\n\n**The AP Trap:** In analytical responses, be precise regarding environmental impacts, such as chemical runoff affecting local water tables and ecosystem health."
+        },
+        {
+          "prompt": "Explain TWO ways in which modern technology and transportation have reduced the relevance of the Von Thünen model in today's globalized economy.",
+          "rubric_bullet_points": [
+            "Technology: Refrigeration/cold chain transport allows perishable goods (milk, fruit) to be produced thousands of miles away from the market.",
+            "Transportation: Modern highways, cargo planes, and shipping containers have drastically lowered transportation costs, meaning distance to market is no longer the absolute determining factor."
+          ],
+          "criticality": "High",
+          "crash_course": "The Von Thünen model's assumptions regarding transportation were based on low-speed, high-cost methods that are largely obsolete in the globalized era.\n\n**The AP Trap:** The development of the 'cold chain' (integrated refrigeration in transport) has significantly decoupled perishability from market proximity."
+        }
+      ]
+    }
+  },
+  {
+    "chapter": "Unit 6: Cities and Urban Land-Use",
+    "combat_modules": {
+      "matching": [
+        {
+          "term": "Central Place Theory",
+          "definition": "A theory that explains the distribution of services based on the fact that settlements serve as centers of market areas for services; larger settlements are fewer and farther apart.",
+          "criticality": "High",
+          "crash_course": "Central Place Theory explains the geometric distribution of settlements and services based on the concepts of threshold and range.\n\n**The AP Trap:** Higher-order settlements provide specialized services with high thresholds and ranges, whereas lower-order settlements offer only basic, low-threshold services."
+        },
+        {
+          "term": "Gentrification",
+          "definition": "A process of converting an urban neighborhood from a predominantly low-income, renter-occupied area to a predominantly middle-class, owner-occupied area.",
+          "criticality": "High",
+          "crash_course": "Gentrification is the socioeconomic transition of an urban neighborhood from a low-income area to a predominantly affluent demographic through reinvestment.\n\n**The AP Trap:** While it leads to physical infrastructure improvements, gentrification frequently results in the displacement of original residents due to rising property values and taxes."
+        },
+        {
+          "term": "Primate City",
+          "definition": "The largest settlement in a country, if it has more than twice as many people as the second-ranking settlement (e.g., Paris, London, Mexico City).",
+          "criticality": "High",
+          "crash_course": "A primate city concentrates a disproportionate share of a nation's population, wealth, and political power, exceeding the size of the second-largest city by more than double.\n\n**The AP Trap:** Primate cities contribute to uneven regional development, as national resources are often centralized in the capital at the expense of peripheral areas."
+        },
+        {
+          "term": "Rank-Size Rule",
+          "definition": "A pattern of settlements in a country such that the nth largest settlement is 1/n the population of the largest settlement.",
+          "criticality": "Medium",
+          "crash_course": "The rank-size rule suggests an urban hierarchy where the nth largest city is 1/n the size of the largest city.\n\n**The AP Trap:** Countries that adhere to this rule, such as the United States, typically exhibit a more equitable distribution of infrastructure and services across their territory."
+        },
+        {
+          "term": "Redlining",
+          "definition": "A discriminatory real estate practice in which members of minority groups are prevented from obtaining money to purchase homes or property in predominantly white neighborhoods.",
+          "criticality": "High",
+          "crash_course": "Redlining was the systemic refusal of financial services to specific neighborhoods, historically based on racial demographics and identified by literal markings on mortgage maps.\n\n**The AP Trap:** This practice is a primary historical driver of contemporary urban decay and the persistence of intergenerational wealth gaps."
+        },
+        {
+          "term": "Blockbusting",
+          "definition": "A process by which real estate agents convince white property owners to sell their houses at low prices because of fear that persons of color will soon move into the neighborhood.",
+          "criticality": "Medium",
+          "crash_course": "Blockbusting involved manipulating racial demographics to incite property sales, facilitating white flight and subsequent suburbanization.\n\n**The AP Trap:** This process historically hollowed out urban tax bases, as affluent residents migrated to suburban areas in response to perceived demographic shifts."
+        },
+        {
+          "term": "Edge City",
+          "definition": "A large node of office and retail activities on the edge of an urban area.",
+          "criticality": "Medium",
+          "crash_course": "Edge cities are significant commercial and office hubs located on the urban periphery, typically near major highway intersections.\n\n**The AP Trap:** The development of edge cities is a direct consequence of automobile dependence and the decentralization of urban functions from the traditional Central Business District (CBD)."
+        },
+        {
+          "term": "Squatter Settlement",
+          "definition": "An area within a city in a less developed country in which people illegally establish residences on land they do not own or rent and erect homemade structures.",
+          "criticality": "High",
+          "crash_course": "Squatter settlements are informal, unplanned residential areas established on land where residents lack legal tenure, commonly found in rapidly urbanizing LDCs.\n\n**The AP Trap:** These settlements arise when urban population growth exceeds municipal capacity to provide formalized housing and basic infrastructure."
+        },
+        {
+          "term": "New Urbanism",
+          "definition": "An urban design movement which promotes environmentally friendly habits by creating walkable neighborhoods containing a wide range of housing and job types.",
+          "criticality": "Medium",
+          "crash_course": "New Urbanism is a design strategy intended to mitigate urban sprawl by promoting walkable, mixed-use neighborhoods.\n\n**The AP Trap:** By integrating residential and commercial spaces, New Urbanism seeks to reduce automobile dependence and foster social cohesion within urban environments."
+        },
+        {
+          "term": "Concentric Zone Model (Burgess)",
+          "definition": "A model of the internal structure of cities in which social groups are spatially arranged in a series of rings expanding outward from the CBD.",
+          "criticality": "Low",
+          "crash_course": "The Concentric Zone Model describes urban structure as a series of expanding rings centered on a primary Central Business District (CBD).\n\n**The AP Trap:** This model is based on early 20th-century Chicago and its applicability is limited in modern, automobile-centric cities that exhibit more complex spatial patterns."
+        },
+        {
+          "term": "Brownfields",
+          "definition": "Former industrial or commercial sites where future use is affected by real or perceived environmental contamination.",
+          "criticality": "Low",
+          "crash_course": "Brownfields are former industrial sites where redevelopment is complicated by real or perceived environmental contamination.\n\n**The AP Trap:** Urban planners prioritize the remediation of brownfields to promote infill development and preserve undeveloped 'greenfield' areas."
+        }
+      ],
+      "multiple_choice": [
+        {
+          "stimulus": "A city government invests heavily in renovating a decayed waterfront district. Over the next five years, property taxes double, coffee shops replace discount stores, and long-time low-income residents are forced to move due to rising rents.",
+          "question": "This process is best identified as:",
+          "options": [
+            "A) Blockbusting",
+            "B) Urban sprawl",
+            "C) Gentrification",
+            "D) Counter-urbanization"
+          ],
+          "correct_answer": "C",
+          "explanation": "Gentrification is the influx of wealthier individuals into an urban area, leading to physical improvements but displacing poorer, original residents due to increased costs.",
+          "criticality": "High",
+          "crash_course": "Gentrification results in physical infrastructure improvements but frequently facilitates the displacement of economically disadvantaged populations.\n\n**The AP Trap:** Be cautious of the term 'urban revitalization,' which may serve as a euphemism for the displacement effects inherent in gentrification."
+        },
+        {
+          "stimulus": "According to Central Place Theory, a specialized neurosurgery center requires a population of at least 500,000 people to support it, while a local gas station only requires 500 people.",
+          "question": "The minimum number of people needed to support a service is known as the:",
+          "options": [
+            "A) Range",
+            "B) Threshold",
+            "C) Market Area",
+            "D) Break-point"
+          ],
+          "correct_answer": "B",
+          "explanation": "In Central Place Theory, 'Threshold' is the minimum population required to sustain a business, while 'Range' is the maximum distance people will travel for it.",
+          "criticality": "High",
+          "crash_course": "The threshold is the minimum population required to sustain a specific service or business.\n\n**The AP Trap:** High-threshold services, such as specialized medical centers, require large urban populations, while low-threshold services can be supported in smaller settlements."
+        },
+        {
+          "stimulus": "In Mexico, Mexico City has over 21 million residents. The next largest city, Guadalajara, has roughly 5 million. This extreme concentration of population and economic power in one city is a prime example of:",
+          "question": "Which urban concept does this population distribution illustrate?",
+          "options": [
+            "A) Rank-Size Rule",
+            "B) Primate City Rule",
+            "C) Edge City phenomenon",
+            "D) The Multiple Nuclei Model"
+          ],
+          "correct_answer": "B",
+          "explanation": "A Primate City is a country's largest city when it is disproportionately larger (more than double) the size of the second-largest city.",
+          "criticality": "Medium",
+          "crash_course": "A primate city dominates the national urban hierarchy, centralizing human and financial resources in a single metropolitan area.\n\n**The AP Trap:** This concentration often exacerbates regional inequality by siphoning capital and talent away from smaller cities and rural regions."
+        },
+        {
+          "stimulus": "Rapid urbanization in developing countries often drastically outpaces the government's ability to provide affordable housing, water, and sewage systems.",
+          "question": "What is the most common visible landscape result of this rapid, unsupported urbanization?",
+          "options": [
+            "A) The creation of greenbelts",
+            "B) High-density luxury gentrification",
+            "C) Squatter settlements (favelas/shantytowns) on the outskirts of the city",
+            "D) Counter-urbanization back to rural areas"
+          ],
+          "correct_answer": "C",
+          "explanation": "When poor migrants move to LDC cities and cannot afford housing, they build informal, illegal squatter settlements on the periphery where land is unwanted.",
+          "criticality": "High",
+          "crash_course": "Rapid urban growth that exceeds municipal capacity inevitably results in the formation of informal squatter settlements.\n\n**The AP Trap:** In LDCs, lower-income populations are typically concentrated on the urban periphery, whereas in many North American cities, economically disadvantaged groups are concentrated near the urban core."
+        }
+      ],
+      "frq_drills": [
+        {
+          "prompt": "Explain TWO negative consequences of urban sprawl on the surrounding environment and infrastructure.",
+          "rubric_bullet_points": [
+            "Environment: Loss of agricultural land, deforestation, and increased carbon emissions due to heavy reliance on automobiles.",
+            "Infrastructure: Strain on municipal budgets to extend roads, water lines, and emergency services across a massive, low-density geographic area."
+          ],
+          "criticality": "High",
+          "crash_course": "Urban sprawl is characterized by low-density, automobile-dependent development extending from the urban core.\n\n**The AP Trap:** Ensure analytical specificity; for example, highlight how sprawl necessitates the conversion of arable agricultural land into residential space."
+        },
+        {
+          "prompt": "Identify ONE goal of the New Urbanism movement and explain how it attempts to solve problems caused by traditional car-dependent suburbs.",
+          "rubric_bullet_points": [
+            "Goal: Create walkable, mixed-use neighborhoods that reduce reliance on cars.",
+            "Explanation: By zoning residential and commercial spaces together, residents can walk to grocery stores and work, reducing traffic, pollution, and urban sprawl."
+          ],
+          "criticality": "Medium",
+          "crash_course": "New Urbanism provides a design-based strategy to mitigate the environmental and social impacts of urban sprawl.\n\n**The AP Trap:** A defining characteristic of New Urbanism is 'mixed-use zoning,' which integrates residential and commercial functions within a single, walkable neighborhood."
+        }
+      ]
+    }
+  },
+  {
+    "chapter": "Unit 7: Industrial and Economic Development",
+    "combat_modules": {
+      "matching": [
+        {
+          "term": "Rostow's Stages of Economic Growth",
+          "definition": "A model of economic development that describes a country's progression which occurs in five stages transforming them from least-developed to most-developed countries.",
+          "criticality": "High",
+          "crash_course": "Rostow's model posits a linear progression through five distinct stages of development, from traditional society to high mass consumption.\n\n**The AP Trap:** Critics argue that the model is Eurocentric and ignores the structural barriers imposed by colonialism that prevent many periphery nations from reaching the final stages."
+        },
+        {
+          "term": "Wallerstein's World Systems Theory",
+          "definition": "A theory that treats the global economy as a large system divided into core, semi-periphery, and periphery countries based on their economic roles.",
+          "criticality": "High",
+          "crash_course": "This theory categorizes states into core, semi-periphery, and periphery based on their economic role and degree of capital accumulation.\n\n**The AP Trap:** The core states maintain global dominance by extracting raw materials and labor from the periphery, creating a relationship of structural dependency."
+        },
+        {
+          "term": "Maquiladoras",
+          "definition": "Factories built by US companies in Mexico near the US border to take advantage of much lower labor costs.",
+          "criticality": "High",
+          "crash_course": "Maquiladoras are foreign-owned manufacturing plants in Mexico that assemble components for export, primarily to the United States.\n\n**The AP Trap:** These facilities are strategically located near the border to utilize competitive labor costs while minimizing transportation expenses to major consumer markets."
+        },
+        {
+          "term": "New International Division of Labor",
+          "definition": "Transfer of some types of jobs, especially those requiring low-paid less skilled workers, from more developed to less developed countries.",
+          "criticality": "High",
+          "crash_course": "This refers to the spatial reorganization of economic activities where high-level research and design are centralized in the core, while labor-intensive assembly is outsourced to the periphery.\n\n**The AP Trap:** This process explains why corporations maintain headquarters in MDCs while their physical production facilities are concentrated in LDCs with lower labor costs."
+        },
+        {
+          "term": "Primary Sector",
+          "definition": "The portion of the economy concerned with the direct extraction of materials from Earth's surface (e.g., agriculture, mining, fishing).",
+          "criticality": "High",
+          "crash_course": "The primary sector involve the direct extraction of natural resources from the environment, such as farming, mining, and forestry.\n\n**The AP Trap:** A high percentage of the labor force in the primary sector is a strong indicator of a less developed country (LDC)."
+        },
+        {
+          "term": "Secondary Sector",
+          "definition": "The portion of the economy concerned with manufacturing useful products through processing, transforming, and assembling raw materials.",
+          "criticality": "High",
+          "crash_course": "The secondary sector focuses on the processing of raw materials into finished industrial goods through manufacturing.\n\n**The AP Trap:** Rapid growth in this sector typically signifies that a country is in the process of industrialization, common in semi-periphery nations."
+        },
+        {
+          "term": "Tertiary Sector",
+          "definition": "The portion of the economy concerned with transportation, communications, and utilities, sometimes extended to the provision of all goods and services to people in exchange for payment (Service sector).",
+          "criticality": "High",
+          "crash_course": "The tertiary sector encompasses the provision of services and intangible value, including commerce, transportation, and healthcare.\n\n**The AP Trap:** Dominance of the tertiary sector in a national economy is a primary characteristic of more developed core nations (MDCs)."
+        },
+        {
+          "term": "Quaternary Sector",
+          "definition": "Knowledge-based sector that includes research and development, business consulting, financial services, education, and software development.",
+          "criticality": "Medium",
+          "crash_course": "The quaternary sector is a knowledge-based portion of the economy focused on information management, research, and high-level professional services.\n\n**The AP Trap:** This sector requires significant investment in higher education and specialized infrastructure, and is found almost exclusively in the wealthiest core nations."
+        },
+        {
+          "term": "Human Development Index (HDI)",
+          "definition": "Indicator of level of development for each country, constructed by United Nations, combining income, literacy, education, and life expectancy.",
+          "criticality": "High",
+          "crash_course": "HDI is a composite index used by the United Nations to measure multidimensional development, including health, education, and standard of living.\n\n**The AP Trap:** HDI emphasizes that economic output (GNI per capita) is insufficient to measure human well-being without considering social indicators like literacy and life expectancy."
+        },
+        {
+          "term": "Agglomeration",
+          "definition": "Grouping together of many firms from the same industry in a single area for collective or cooperative use of infrastructure and sharing of labor resources (e.g., Silicon Valley).",
+          "criticality": "Medium",
+          "crash_course": "Agglomeration is the spatial clustering of similar industries to leverage shared infrastructure, labor pools, and information exchange.\n\n**The AP Trap:** In high-tech hubs like Silicon Valley, agglomeration facilitates rapid innovation and provides firms with immediate access to specialized talent."
+        },
+        {
+          "term": "Microfinance",
+          "definition": "Provision of small loans and other financial services to individuals and small businesses in developing countries that are unable to obtain loans from commercial banks.",
+          "criticality": "Medium",
+          "crash_course": "Microfinance involves providing small-scale financial services, such as loans and credit, to individuals and small businesses in economically disadvantaged regions.\n\n**The AP Trap:** A significant majority of microloans are distributed to women, which facilitates economic empowerment and frequently correlates with a decline in Total Fertility Rates."
+        },
+        {
+          "term": "Ecotourism",
+          "definition": "Tourism that focuses on natural environments, protecting ecosystems, and educating visitors, while providing jobs to local populations.",
+          "criticality": "Low",
+          "crash_course": "Ecotourism involves revenue generation through sustainable tourism that emphasizes ecological preservation and environmental education.\n\n**The AP Trap:** Ecotourism provides a viable economic pathway for LDCs to achieve development without the environmental degradation associated with heavy industrialization."
+        }
+      ],
+      "multiple_choice": [
+        {
+          "stimulus": "A multinational technology corporation designs its products at its headquarters in California, sources raw materials from Central Africa, and assembles the final goods in Southeast Asia.",
+          "question": "This supply chain structure is an example of:",
+          "options": [
+            "A) The New International Division of Labor",
+            "B) The multiplier effect",
+            "C) Agglomeration",
+            "D) Fordist production"
+          ],
+          "correct_answer": "A",
+          "explanation": "The New International Division of Labor involves splitting production processes across the globe to take advantage of different regional strengths, such as cheap labor in LDCs and high-tech design in Core countries.",
+          "criticality": "High",
+          "crash_course": "The New International Division of Labor involves the global fragmentation of the production process to optimize labor and resource costs.\n\n**The AP Trap:** Strategic functions like design remain in the core, while labor-intensive assembly is relocated to the periphery to exploit lower wages."
+        },
+        {
+          "stimulus": "In Country X, 70% of the workforce is employed in agriculture and mining, 20% in manufacturing, and 10% in services. In Country Y, 2% of the workforce is in agriculture, 15% in manufacturing, and 83% in services.",
+          "question": "Based on this data, which of the following statements is most likely true?",
+          "options": [
+            "A) Country X is in Stage 5 of the DTM.",
+            "B) Country Y is a periphery nation.",
+            "C) Country X is a developing (LDC) nation heavily reliant on the primary sector.",
+            "D) Country Y has a lower Human Development Index (HDI) than Country X."
+          ],
+          "correct_answer": "C",
+          "explanation": "Developing nations (LDCs) have the majority of their workforce in the primary sector (extracting raw materials), while developed nations (MDCs) have transitioned to the tertiary (service) sector.",
+          "criticality": "High",
+          "crash_course": "Labor force distribution across economic sectors serves as a primary indicator of national development levels.\n\n**The AP Trap:** A high concentration of workers in the primary sector (agriculture/mining) is a reliable indicator that a country is in the early stages of development."
+        },
+        {
+          "stimulus": "Weber’s Least Cost Theory states that the location of a manufacturing plant is heavily influenced by the weight of raw materials versus the weight of the finished product.",
+          "question": "If a factory produces potato chips (where heavy, bulky potatoes are sliced, fried, and packaged into light, airy bags), where should the factory be located?",
+          "options": [
+            "A) As close to the market (consumers) as possible.",
+            "B) As close to the potato farms as possible.",
+            "C) In a maquiladora to utilize cheap labor.",
+            "D) Near a major international airport."
+          ],
+          "correct_answer": "B",
+          "explanation": "This is a 'bulk-reducing' industry. Because the raw material (potatoes) is heavier and more expensive to transport than the final product (light bags of chips), the factory locates near the raw materials to save on shipping costs.",
+          "criticality": "High",
+          "crash_course": "Weber's theory posits that industrial location is determined by the objective of minimizing aggregate transportation and labor costs.\n\n**The AP Trap:** Bulk-reducing industries locate near raw material sources, whereas bulk-gaining industries gravitate toward consumer markets to minimize finished-product shipping costs."
+        },
+        {
+          "stimulus": "Wallerstein's World Systems Theory categorizes countries like Brazil, India, and Mexico—which have growing industrial bases but still face significant poverty and rely on exporting to wealthier nations—in a specific tier.",
+          "question": "These countries are classified as:",
+          "options": [
+            "A) Core",
+            "B) Semi-periphery",
+            "C) Periphery",
+            "D) Pre-conditions for Takeoff"
+          ],
+          "correct_answer": "B",
+          "explanation": "Semi-periphery countries are the 'middle class' of the global economy. They are industrializing and exploiting periphery nations, but are still exploited by core nations.",
+          "criticality": "Medium",
+          "crash_course": "Semi-periphery countries occupy an intermediate tier of the global economy, exhibiting characteristics of both core and periphery nations.\n\n**The AP Trap:** These nations often serve as centers of global manufacturing, industrializing rapidly while remaining structurally dependent on core markets."
+        }
+      ],
+      "frq_drills": [
+        {
+          "prompt": "Using Wallerstein's World Systems Theory, define a Core country and a Periphery country, and explain the economic relationship between them.",
+          "rubric_bullet_points": [
+            "Core: Developed, wealthy nations that control global markets and produce high-profit consumption goods (e.g., USA, Japan).",
+            "Periphery: Developing nations with low wages that rely heavily on exporting raw materials (e.g., Sub-Saharan Africa).",
+            "Relationship: Core countries exploit periphery countries for cheap labor and raw materials, keeping the periphery dependent and economically marginalized."
+          ],
+          "criticality": "High",
+          "crash_course": "World Systems Theory is built on the concept of structural dependency and economic exploitation between global tiers.\n\n**The AP Trap:** Analytical responses must emphasize that the core-periphery relationship is fundamentally characterized by the extraction of value from the periphery to the core."
+        },
+        {
+          "prompt": "Explain TWO ways in which the transition from an economy based on the Primary Sector to an economy based on the Tertiary/Quaternary sectors impacts the roles of women in a society.",
+          "rubric_bullet_points": [
+            "Education: Moving to a service/knowledge economy requires higher education, leading to vastly improved literacy and graduation rates for women.",
+            "Fertility Rates: As women enter the professional workforce and gain economic independence, they delay marriage and have fewer children, lowering the Total Fertility Rate."
+          ],
+          "criticality": "High",
+          "crash_course": "The transition to a service or knowledge economy typically correlates with significant shifts in gender roles and increased female participation in formal education.\n\n**The AP Trap:** The curriculum emphasizes the inverse correlation between female economic empowerment and Total Fertility Rates (TFR) as societies industrialize."
+        }
+      ]
+    }
+  }
+]
